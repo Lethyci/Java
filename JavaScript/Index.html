@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calculadora de Média</title>
+<style>
+      body {
+            background-color: #a48cc5;
+        }
+</style>
+   <script type="text/javascript">
+
+    function media(){
+     var nota1 = parseFloat(document.getElementById("nota1").value);
+     var nota2 = parseFloat(document.getElementById("nota2").value);
+     var media = (nota1 + nota2)/2 ;
+    
+     if(media >= 6)
+        alert("Parabéns, você foi Aprovado!");
+      else
+      alert("Que pena, você foi Reprovado!");
+
+    }
+ </script>
+ </head>
+ <body>
+     <h1>Calcular Média</h1>
+    Primeira Nota: <input id="nota1" type="number"> <br>
+    Segunda Nota: <input id="nota2" type="number"> <br>
+    <br>
+    <button onclick="media()"> Calcular Média </button>
+ </body>
+</html>

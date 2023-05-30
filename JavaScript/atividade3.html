@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+input[type="text"] {
+  margin-right: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>Lista De Cores</h2>
+<ul id="MinhaLista">
+    <li>Preto</li>
+    <li>Branco</li>
+    <li>Roxo</li>
+  </ul>
+
+
+<div>
+  <input type="text" id="CorInput" placeholder="Cor">
+  <label><input type="radio" name="cores" value="green">Verde</label>
+  <label><input type="radio" name="cores" value="blue">Azul</label>
+  <label><input type="radio" name="cores" value="red">Vermelho</label>
+  <label><input type="radio" name="cores" value="pink">Rosa</label>
+  <button onclick="addCor()">Anexar cor</button>
+</div>
+
+<script>
+function addCor() {
+  var CorInput = document.getElementById("CorInput");
+  var Cor = CorInput.value;
+
+  var cor = document.querySelector('input[name="cores"]:checked').value;
+
+  var newCor = document.createElement("li");
+  newCor.textContent = cor;
+  newCor.style.color = cor;
+
+  var list = document.getElementById("MinhaLista");
+  list.appendChild(newCor);
+
+  CorInput.value = "";
+}
+</script>
+
+</body>
+</html>
